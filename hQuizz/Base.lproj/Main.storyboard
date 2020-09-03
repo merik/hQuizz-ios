@@ -187,7 +187,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rbb-o5-ihD" customClass="hQuizzRoundedView" customModule="hQuizz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="70" width="382" height="60"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l94-8h-IXR" customClass="hQuizz">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l94-8h-IXR">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="60"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -493,6 +493,9 @@
                                 <state key="normal" title="Next Question">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didTapOnNextQuestion:" destination="Kr6-gQ-3rT" eventType="touchUpInside" id="P8i-gq-FeK"/>
                                 </connections>
@@ -508,6 +511,9 @@
                                 <state key="normal" title="Read Article &gt;">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapOnReadArticle:" destination="Kr6-gQ-3rT" eventType="touchUpInside" id="ydG-4r-i9f"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -547,6 +553,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zg8-iB-Bbj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="885.50724637681162" y="138.61607142857142"/>
+        </scene>
+        <!--Article View Controller-->
+        <scene sceneID="VTt-Bk-Zuz">
+            <objects>
+                <viewController storyboardIdentifier="article" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FCq-Il-V4o" customClass="ArticleViewController" customModule="hQuizz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V0q-MM-r7Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="svM-zY-eNN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Close" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kf5-39-bcX">
+                                <rect key="frame" x="0.0" y="816" width="414" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="UwF-Kq-SjC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="kf5-39-bcX" secondAttribute="bottom" id="TwR-Ga-usS"/>
+                            <constraint firstItem="kf5-39-bcX" firstAttribute="leading" secondItem="V0q-MM-r7Q" secondAttribute="leading" id="UQ5-eG-c03"/>
+                            <constraint firstAttribute="trailing" secondItem="kf5-39-bcX" secondAttribute="trailing" id="naJ-MH-xnr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CFb-kt-dca"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeLabel" destination="kf5-39-bcX" id="Bp2-jO-Lof"/>
+                        <outlet property="webView" destination="svM-zY-eNN" id="TRW-Yj-8Tg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gBB-tE-DXi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1682.608695652174" y="134.59821428571428"/>
         </scene>
     </scenes>
     <resources>

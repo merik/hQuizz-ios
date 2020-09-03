@@ -36,6 +36,19 @@ class ResponseViewController: UIViewController {
         dismiss(animated: false, completion: nil)
     }
     
+    @IBAction func didTapOnReadArticle(_ sender: Any) {
+        guard let data = responseData else {
+            return
+        }
+        
+        let articleUrl = data.question.storyUrl
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "article") as! ArticleViewController
+        vc.articleUrl = articleUrl
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

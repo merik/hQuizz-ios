@@ -37,6 +37,8 @@
 		038D234624FF64EE00321F91 /* ApiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038D234524FF64EE00321F91 /* ApiRepository.swift */; };
 		038D234824FF6CC500321F91 /* QuestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038D234724FF6CC500321F91 /* QuestionsViewModel.swift */; };
 		03DC7BDF2500738A0032EE1F /* hQuizzRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC7BDE2500738A0032EE1F /* hQuizzRoundedView.swift */; };
+		03DC7BE225007A620032EE1F /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC7BE125007A620032EE1F /* ArticleViewController.swift */; };
+		03DC7BE5250080E30032EE1F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DC7BE4250080E30032EE1F /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		038D234524FF64EE00321F91 /* ApiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRepository.swift; sourceTree = "<group>"; };
 		038D234724FF6CC500321F91 /* QuestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewModel.swift; sourceTree = "<group>"; };
 		03DC7BDE2500738A0032EE1F /* hQuizzRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hQuizzRoundedView.swift; sourceTree = "<group>"; };
+		03DC7BE125007A620032EE1F /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		03DC7BE4250080E30032EE1F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03DC7BE5250080E30032EE1F /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +171,7 @@
 				038D231924FF5AB300321F91 /* hQuizzTests */,
 				038D232424FF5AB300321F91 /* hQuizzUITests */,
 				038D230124FF5AB100321F91 /* Products */,
+				03DC7BE3250080E30032EE1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,6 +224,7 @@
 		038D233324FF5D6D00321F91 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				03DC7BE025007A1E0032EE1F /* Article */,
 				036CF47524FF9EDD0059E7C4 /* Dashboard */,
 				038D233A24FF605D00321F91 /* Response */,
 				038D233824FF5DEF00321F91 /* Questions */,
@@ -288,6 +295,22 @@
 				036CF47824FFAF3A0059E7C4 /* GameApiResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		03DC7BE025007A1E0032EE1F /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				03DC7BE125007A620032EE1F /* ArticleViewController.swift */,
+			);
+			path = Article;
+			sourceTree = "<group>";
+		};
+		03DC7BE3250080E30032EE1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03DC7BE4250080E30032EE1F /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,6 +467,7 @@
 				038D233C24FF607100321F91 /* ResponseViewController.swift in Sources */,
 				038D234624FF64EE00321F91 /* ApiRepository.swift in Sources */,
 				036CF47924FFAF3A0059E7C4 /* GameApiResponse.swift in Sources */,
+				03DC7BE225007A620032EE1F /* ArticleViewController.swift in Sources */,
 				036CF47D24FFB5D70059E7C4 /* UIImageLoader.swift in Sources */,
 				036CF47B24FFB59E0059E7C4 /* ImageLoader.swift in Sources */,
 			);
