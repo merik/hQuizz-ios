@@ -46,13 +46,13 @@ class hQuizzProgressBar: UIView {
         backgroundMask.path = UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).cgPath
         layer.mask = backgroundMask
         
+        let progressRect = CGRect(origin: .zero, size: CGSize(width: rect.width * progress, height: rect.height))
+        progressLayer.frame = progressRect
+        progressLayer.backgroundColor = color?.cgColor
+        
         color?.setStroke()
         let path = UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius)
         path.lineWidth = 1.0
         path.stroke()
-        
-        let progressRect = CGRect(origin: .zero, size: CGSize(width: rect.width * progress, height: rect.height))
-        progressLayer.frame = progressRect
-        progressLayer.backgroundColor = color?.cgColor
     }
 }

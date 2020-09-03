@@ -21,7 +21,7 @@ class hQuizzBgImage: UIView {
         }
     }
     
-    @IBInspectable var alphaRatio: CGFloat = 0.7 {
+    @IBInspectable var alphaRatio: CGFloat = 0.9 {
         didSet {
             filteredView.backgroundColor = UIColor.black.withAlphaComponent(alphaRatio)
         }

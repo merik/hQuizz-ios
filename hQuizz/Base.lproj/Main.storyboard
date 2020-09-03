@@ -541,6 +541,7 @@
                     <connections>
                         <outlet property="bgImage" destination="e7a-fy-WNL" id="hHZ-FA-PU5"/>
                         <outlet property="headlineLabel" destination="VIK-ba-Rjv" id="OiB-NX-3bK"/>
+                        <outlet property="leaderboardsButton" destination="36A-EN-HuM" id="bSR-js-BBN"/>
                         <outlet property="questionImageView" destination="Ngt-Sj-PSx" id="hyO-TH-bdo"/>
                         <outlet property="readArticleButton" destination="jYT-iS-p81" id="xVd-XA-g4L"/>
                         <outlet property="standFirstLabel" destination="lPY-LA-4Tp" id="GCe-m6-A32"/>

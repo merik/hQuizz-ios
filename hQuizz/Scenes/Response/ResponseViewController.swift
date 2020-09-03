@@ -17,6 +17,7 @@ class ResponseViewController: UIViewController {
     private let colorForCorrectAnswer = UIColor(hQuizz: .primary)
     private let colorForIncorrectAnswer = UIColor(hQuizz: .danger)
     
+    @IBOutlet weak var leaderboardsButton: hQuizzButton!
     @IBOutlet weak var readArticleButton: UIButton!
     @IBOutlet weak var bgImage: hQuizzBgImage!
     @IBOutlet weak var questionImageView: UIImageView!
@@ -54,6 +55,19 @@ class ResponseViewController: UIViewController {
 
         readArticleButton.layer.cornerRadius = 5.0
         readArticleButton.clipsToBounds = true
+        readArticleButton.setTitle("Read Article \u{203A}", for: .normal)
+        setLeaderboardsButtonText()
+    }
+    
+    private func setLeaderboardsButtonText() {
+        let stringAttrs = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15, weight: .regular), NSAttributedString.Key.foregroundColor : UIColor.white]
+        let leaderboardsAttrs = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15, weight: .heavy), NSAttributedString.Key.foregroundColor : UIColor.white]
+        
+        let titleText = NSMutableAttributedString(string: "How am I doing in the ", attributes: stringAttrs)
+        let leaderboardsString = NSMutableAttributedString(string: "leaderboards?", attributes: leaderboardsAttrs)
+        
+        titleText.append(leaderboardsString)
+        leaderboardsButton.setAttributedTitle(titleText, for: .normal)
     }
     
     override var prefersStatusBarHidden: Bool {
