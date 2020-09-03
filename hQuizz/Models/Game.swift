@@ -82,10 +82,6 @@ class Game {
         return questions.count
     }
     
-    var endOfGame: Bool {
-        return currentQuestionIndex >= numQuestions
-    }
-    
     func userAnswer(with response: UserResponse) -> AnswerValue {
         responses.append(response)
         switch response {

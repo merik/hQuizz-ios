@@ -135,14 +135,19 @@ class QuestionsViewController: UIViewController {
         answer2Label.text = ""
         answer3Label.text = ""
         sectionLabel.text = ""
+        sectionLabel.text = ""
     }
     
     private func showEndOfGame() {
-        
+        dismiss(animated: true, completion: nil)
     }
     
     private func showErrorMessage(_ message: String) {
-        
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { _ in
+            self.dismiss(animated: false, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     private func showCorrectResponse() {

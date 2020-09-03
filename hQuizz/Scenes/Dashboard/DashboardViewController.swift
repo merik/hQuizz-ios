@@ -27,12 +27,13 @@ class DashboardViewController: UIViewController {
         game.newGame(completion: {[weak self] status in
             switch status {
             case .error(let message):
-                self?.handleErrorMessage(with: message)
+                DispatchQueue.main.async {
+                    self?.handleErrorMessage(with: message)
+                }
             case .ready:
                 DispatchQueue.main.async {
                     self?.startGame(game)
                 }
-                
             }
         })
     }
@@ -47,7 +48,10 @@ class DashboardViewController: UIViewController {
     }
     
     private func handleErrorMessage(with message: String) {
-        
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { _ in
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 
 }
