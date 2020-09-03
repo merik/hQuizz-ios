@@ -71,6 +71,10 @@ class QuestionsViewController: UIViewController {
         answer3View.isUserInteractionEnabled = true
         answer3View.addGestureRecognizer(tap3)
         
+        let readArticleTap = UITapGestureRecognizer(target: self, action: #selector(Self.didTapOnStandFirst))
+        standFirstLabel.isUserInteractionEnabled = true
+        standFirstLabel.addGestureRecognizer(readArticleTap)
+        
     }
     
     private func bindToViewModel() {
@@ -113,6 +117,18 @@ class QuestionsViewController: UIViewController {
     
     @objc private func didTapOnAnswer3() {
         viewModel.answer(with: 2)
+    }
+    
+    @objc private func didTapOnStandFirst() {
+        guard let articleUrl = viewModel.currentQuestion?.storyUrl else {
+            return
+        }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "article") as! ArticleViewController
+        vc.articleUrl = articleUrl
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
     
     private func updateScore() {
