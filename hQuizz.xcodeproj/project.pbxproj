@@ -19,7 +19,7 @@
 		036CF47D24FFB5D70059E7C4 /* UIImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036CF47C24FFB5D70059E7C4 /* UIImageLoader.swift */; };
 		036CF48024FFB62C0059E7C4 /* UIImageView+hQuizz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036CF47F24FFB62C0059E7C4 /* UIImageView+hQuizz.swift */; };
 		036CF48224FFBD4E0059E7C4 /* UIImage+hQuizz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036CF48124FFBD4E0059E7C4 /* UIImage+hQuizz.swift */; };
-		037A513F24FFDA2800A8A165 /* ResponsePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037A513E24FFDA2800A8A165 /* ResponsePresenter.swift */; };
+		037A513F24FFDA2800A8A165 /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037A513E24FFDA2800A8A165 /* ResponseData.swift */; };
 		037A514324FFE71800A8A165 /* hQuizzCircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037A514224FFE71800A8A165 /* hQuizzCircularView.swift */; };
 		038D230424FF5AB100321F91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038D230324FF5AB100321F91 /* AppDelegate.swift */; };
 		038D230624FF5AB100321F91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038D230524FF5AB100321F91 /* SceneDelegate.swift */; };
@@ -39,6 +39,7 @@
 		03DC7BDF2500738A0032EE1F /* hQuizzRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC7BDE2500738A0032EE1F /* hQuizzRoundedView.swift */; };
 		03DC7BE225007A620032EE1F /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC7BE125007A620032EE1F /* ArticleViewController.swift */; };
 		03DC7BE5250080E30032EE1F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DC7BE4250080E30032EE1F /* WebKit.framework */; };
+		03DC7BE825008ED00032EE1F /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC7BE725008ED00032EE1F /* EndGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +72,7 @@
 		036CF47C24FFB5D70059E7C4 /* UIImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageLoader.swift; sourceTree = "<group>"; };
 		036CF47F24FFB62C0059E7C4 /* UIImageView+hQuizz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+hQuizz.swift"; sourceTree = "<group>"; };
 		036CF48124FFBD4E0059E7C4 /* UIImage+hQuizz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+hQuizz.swift"; sourceTree = "<group>"; };
-		037A513E24FFDA2800A8A165 /* ResponsePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsePresenter.swift; sourceTree = "<group>"; };
+		037A513E24FFDA2800A8A165 /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
 		037A514224FFE71800A8A165 /* hQuizzCircularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hQuizzCircularView.swift; sourceTree = "<group>"; };
 		038D230024FF5AB100321F91 /* hQuizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hQuizz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		038D230324FF5AB100321F91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +98,7 @@
 		03DC7BDE2500738A0032EE1F /* hQuizzRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hQuizzRoundedView.swift; sourceTree = "<group>"; };
 		03DC7BE125007A620032EE1F /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		03DC7BE4250080E30032EE1F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		03DC7BE725008ED00032EE1F /* EndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,10 +226,11 @@
 		038D233324FF5D6D00321F91 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				03DC7BE025007A1E0032EE1F /* Article */,
 				036CF47524FF9EDD0059E7C4 /* Dashboard */,
 				038D233A24FF605D00321F91 /* Response */,
 				038D233824FF5DEF00321F91 /* Questions */,
+				03DC7BE025007A1E0032EE1F /* Article */,
+				03DC7BE625008E9D0032EE1F /* EndGame */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -275,7 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				038D233B24FF607100321F91 /* ResponseViewController.swift */,
-				037A513E24FFDA2800A8A165 /* ResponsePresenter.swift */,
+				037A513E24FFDA2800A8A165 /* ResponseData.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -311,6 +314,14 @@
 				03DC7BE4250080E30032EE1F /* WebKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		03DC7BE625008E9D0032EE1F /* EndGame */ = {
+			isa = PBXGroup;
+			children = (
+				03DC7BE725008ED00032EE1F /* EndGameViewController.swift */,
+			);
+			path = EndGame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,7 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				038D230824FF5AB100321F91 /* ViewController.swift in Sources */,
-				037A513F24FFDA2800A8A165 /* ResponsePresenter.swift in Sources */,
+				037A513F24FFDA2800A8A165 /* ResponseData.swift in Sources */,
 				036BDE812500093E007DAA83 /* Color.swift in Sources */,
 				038D230424FF5AB100321F91 /* AppDelegate.swift in Sources */,
 				038D234224FF633500321F91 /* Game.swift in Sources */,
@@ -461,6 +472,7 @@
 				038D230624FF5AB100321F91 /* SceneDelegate.swift in Sources */,
 				036CF48024FFB62C0059E7C4 /* UIImageView+hQuizz.swift in Sources */,
 				036CF47724FF9EEF0059E7C4 /* DashboardViewController.swift in Sources */,
+				03DC7BE825008ED00032EE1F /* EndGameViewController.swift in Sources */,
 				036B8CD324FFD11D00654AAD /* hQuizzProgressBar.swift in Sources */,
 				036BDE7F2500091A007DAA83 /* hQuizz.swift in Sources */,
 				03DC7BDF2500738A0032EE1F /* hQuizzRoundedView.swift in Sources */,
