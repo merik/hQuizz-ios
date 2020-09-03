@@ -45,6 +45,9 @@ class QuestionsViewController: UIViewController {
         viewController.delegate = self
         responseViewController = viewController
         
+        sectionLabel.layer.cornerRadius = 5.0
+        sectionLabel.clipsToBounds = true
+        
         standFirstLabel.backgroundColor = UIColor.black.withAlphaComponent(0.25)
         let tap1 = UITapGestureRecognizer(target: self, action: #selector(Self.didTapOnAnswer1))
         answer1View.isUserInteractionEnabled = true
@@ -57,6 +60,7 @@ class QuestionsViewController: UIViewController {
         let tap3 = UITapGestureRecognizer(target: self, action: #selector(Self.didTapOnAnswer3))
         answer3View.isUserInteractionEnabled = true
         answer3View.addGestureRecognizer(tap3)
+        
     }
     
     private func bindToViewModel() {

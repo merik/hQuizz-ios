@@ -105,7 +105,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWe-ch-pfL">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWe-ch-pfL" customClass="hQuizzRoundedView" customModule="hQuizz" customModuleProvider="target">
                                 <rect key="frame" x="16" y="106" width="382" height="180"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0M4-Se-ZQm">
@@ -136,7 +136,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Lo-hs-qJ8">
                                 <rect key="frame" x="16" y="302" width="382" height="200"/>
                                 <subviews>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11X-F1-ezq">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11X-F1-ezq" customClass="hQuizzRoundedView" customModule="hQuizz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENx-mc-DHS">
@@ -154,10 +154,10 @@
                                             <constraint firstAttribute="bottom" secondItem="ENx-mc-DHS" secondAttribute="bottom" id="kis-c8-gTu"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rbb-o5-ihD">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rbb-o5-ihD" customClass="hQuizzRoundedView" customModule="hQuizz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="70" width="382" height="60"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l94-8h-IXR">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l94-8h-IXR" customClass="hQuizz">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="60"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -172,7 +172,7 @@
                                             <constraint firstItem="l94-8h-IXR" firstAttribute="top" secondItem="Rbb-o5-ihD" secondAttribute="top" id="nsV-VX-kor"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Yx-tM-frG">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Yx-tM-frG" customClass="hQuizzRoundedView" customModule="hQuizz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="140" width="382" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8B-vI-u4p">
@@ -206,7 +206,7 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                <color key="value" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="progress">
                                                 <real key="value" value="0.5"/>
@@ -401,7 +401,7 @@
                                     <constraint firstAttribute="height" constant="160" id="ywj-3N-UHy"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqh-a9-SZl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqh-a9-SZl" customClass="hQuizzRoundedView" customModule="hQuizz" customModuleProvider="target">
                                 <rect key="frame" x="16" y="250" width="382" height="250"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ngt-Sj-PSx">
@@ -453,9 +453,6 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="NO"/>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="didTapOnNextQuestion:" destination="Kr6-gQ-3rT" eventType="touchUpInside" id="pr6-Cn-GkW"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJZ-IA-dhc" customClass="hQuizzButton" customModule="hQuizz" customModuleProvider="target">
                                 <rect key="frame" x="16" y="806" width="382" height="40"/>
@@ -509,6 +506,7 @@
                         <outlet property="bgImage" destination="e7a-fy-WNL" id="hHZ-FA-PU5"/>
                         <outlet property="headlineLabel" destination="VIK-ba-Rjv" id="OiB-NX-3bK"/>
                         <outlet property="questionImageView" destination="Ngt-Sj-PSx" id="hyO-TH-bdo"/>
+                        <outlet property="readArticleButton" destination="jYT-iS-p81" id="xVd-XA-g4L"/>
                         <outlet property="standFirstLabel" destination="lPY-LA-4Tp" id="GCe-m6-A32"/>
                         <outlet property="totalPointsLine1Label" destination="1Aq-Ep-SST" id="fFH-o8-lx9"/>
                         <outlet property="totalPointsLine2Label" destination="qKw-vs-IVO" id="jRm-CY-fY5"/>

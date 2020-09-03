@@ -36,6 +36,7 @@
 		038D234424FF646B00321F91 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038D234324FF646B00321F91 /* Repository.swift */; };
 		038D234624FF64EE00321F91 /* ApiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038D234524FF64EE00321F91 /* ApiRepository.swift */; };
 		038D234824FF6CC500321F91 /* QuestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038D234724FF6CC500321F91 /* QuestionsViewModel.swift */; };
+		03DC7BDF2500738A0032EE1F /* hQuizzRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC7BDE2500738A0032EE1F /* hQuizzRoundedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		038D234324FF646B00321F91 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		038D234524FF64EE00321F91 /* ApiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRepository.swift; sourceTree = "<group>"; };
 		038D234724FF6CC500321F91 /* QuestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewModel.swift; sourceTree = "<group>"; };
+		03DC7BDE2500738A0032EE1F /* hQuizzRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hQuizzRoundedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				036B8CD424FFD42400654AAD /* hQuizzButton.swift */,
 				036B8CD624FFD52C00654AAD /* hQuizzBgImage.swift */,
 				037A514224FFE71800A8A165 /* hQuizzCircularView.swift */,
+				03DC7BDE2500738A0032EE1F /* hQuizzRoundedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				036CF47724FF9EEF0059E7C4 /* DashboardViewController.swift in Sources */,
 				036B8CD324FFD11D00654AAD /* hQuizzProgressBar.swift in Sources */,
 				036BDE7F2500091A007DAA83 /* hQuizz.swift in Sources */,
+				03DC7BDF2500738A0032EE1F /* hQuizzRoundedView.swift in Sources */,
 				038D233C24FF607100321F91 /* ResponseViewController.swift in Sources */,
 				038D234624FF64EE00321F91 /* ApiRepository.swift in Sources */,
 				036CF47924FFAF3A0059E7C4 /* GameApiResponse.swift in Sources */,

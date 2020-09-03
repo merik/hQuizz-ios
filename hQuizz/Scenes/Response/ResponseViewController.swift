@@ -17,6 +17,7 @@ class ResponseViewController: UIViewController {
     private let colorForCorrectAnswer = UIColor(hQuizz: .primary)
     private let colorForIncorrectAnswer = UIColor(hQuizz: .danger)
     
+    @IBOutlet weak var readArticleButton: UIButton!
     @IBOutlet weak var bgImage: hQuizzBgImage!
     @IBOutlet weak var questionImageView: UIImageView!
     @IBOutlet weak var headlineLabel: UILabel!
@@ -38,7 +39,8 @@ class ResponseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        readArticleButton.layer.cornerRadius = 5.0
+        readArticleButton.clipsToBounds = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
