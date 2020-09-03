@@ -40,6 +40,7 @@
 		03DC7BE225007A620032EE1F /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC7BE125007A620032EE1F /* ArticleViewController.swift */; };
 		03DC7BE5250080E30032EE1F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DC7BE4250080E30032EE1F /* WebKit.framework */; };
 		03DC7BE825008ED00032EE1F /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC7BE725008ED00032EE1F /* EndGameViewController.swift */; };
+		03DC7BEA25009AF00032EE1F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 03DC7BE925009AF00032EE1F /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		03DC7BE125007A620032EE1F /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		03DC7BE4250080E30032EE1F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		03DC7BE725008ED00032EE1F /* EndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
+		03DC7BE925009AF00032EE1F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		038D22F724FF5AB100321F91 = {
 			isa = PBXGroup;
 			children = (
+				03DC7BE925009AF00032EE1F /* README.md */,
 				038D230224FF5AB100321F91 /* hQuizz */,
 				038D231924FF5AB300321F91 /* hQuizzTests */,
 				038D232424FF5AB300321F91 /* hQuizzUITests */,
@@ -430,6 +433,7 @@
 			files = (
 				038D231024FF5AB200321F91 /* LaunchScreen.storyboard in Resources */,
 				038D230D24FF5AB200321F91 /* Assets.xcassets in Resources */,
+				03DC7BEA25009AF00032EE1F /* README.md in Resources */,
 				038D230B24FF5AB100321F91 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
