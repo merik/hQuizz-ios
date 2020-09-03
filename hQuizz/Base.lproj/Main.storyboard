@@ -22,24 +22,37 @@
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="bg"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LET'S GUESS THE HEADLINES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocq-e3-p3H">
+                                <rect key="frame" x="81" y="248" width="252" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="252" id="gTa-e7-KBs"/>
+                                    <constraint firstAttribute="height" constant="100" id="mDJ-4T-mfB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azf-zR-AhI" customClass="hQuizzButton" customModule="hQuizz" customModuleProvider="target">
-                                <rect key="frame" x="16" y="428" width="382" height="40"/>
+                                <rect key="frame" x="147" y="388" width="120" height="120"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="gZL-vc-8n6"/>
+                                    <constraint firstAttribute="width" constant="120" id="Ne2-1e-XNm"/>
+                                    <constraint firstAttribute="height" constant="120" id="gZL-vc-8n6"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Play">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didTapOnPlay:" destination="glH-8P-oMr" eventType="touchUpInside" id="UAI-cF-BkR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cnl-XR-e5i" customClass="hQuizzButton" customModule="hQuizz" customModuleProvider="target">
-                                <rect key="frame" x="16" y="528" width="382" height="40"/>
+                                <rect key="frame" x="16" y="722" width="382" height="40"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="gNp-V8-Gc7"/>
@@ -48,22 +61,39 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqb-sQ-P3F" customClass="hQuizzButton" customModule="hQuizz" customModuleProvider="target">
+                                <rect key="frame" x="16" y="792" width="382" height="40"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="APT-Fy-2YV"/>
+                                </constraints>
+                                <state key="normal" title="Options">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Azf-zR-AhI" firstAttribute="leading" secondItem="PhQ-I9-Yk2" secondAttribute="leading" constant="16" id="5LV-gV-7J1"/>
+                            <constraint firstItem="PhQ-I9-Yk2" firstAttribute="trailing" secondItem="Sqb-sQ-P3F" secondAttribute="trailing" constant="16" id="1P3-r3-ysx"/>
                             <constraint firstItem="FnS-Gv-P8Z" firstAttribute="leading" secondItem="PhQ-I9-Yk2" secondAttribute="leading" id="5dx-vE-kHN"/>
-                            <constraint firstItem="Cnl-XR-e5i" firstAttribute="leading" secondItem="PhQ-I9-Yk2" secondAttribute="leading" constant="16" id="C8z-ZH-9qx"/>
                             <constraint firstItem="FnS-Gv-P8Z" firstAttribute="trailing" secondItem="PhQ-I9-Yk2" secondAttribute="trailing" id="CyC-pp-qyy"/>
                             <constraint firstItem="Azf-zR-AhI" firstAttribute="centerY" secondItem="07F-hh-tBd" secondAttribute="centerY" id="DNw-oY-1R4"/>
+                            <constraint firstItem="Sqb-sQ-P3F" firstAttribute="leading" secondItem="PhQ-I9-Yk2" secondAttribute="leading" constant="16" id="Ehg-tj-c9p"/>
+                            <constraint firstItem="PhQ-I9-Yk2" firstAttribute="bottom" secondItem="Sqb-sQ-P3F" secondAttribute="bottom" constant="30" id="HQB-Zg-J9Q"/>
+                            <constraint firstItem="PhQ-I9-Yk2" firstAttribute="trailing" secondItem="Cnl-XR-e5i" secondAttribute="trailing" constant="16" id="LCj-P2-dD8"/>
                             <constraint firstItem="FnS-Gv-P8Z" firstAttribute="top" secondItem="07F-hh-tBd" secondAttribute="top" id="Le1-Sn-xWw"/>
-                            <constraint firstItem="PhQ-I9-Yk2" firstAttribute="trailing" secondItem="Azf-zR-AhI" secondAttribute="trailing" constant="16" id="UqH-Kq-AA5"/>
+                            <constraint firstItem="Sqb-sQ-P3F" firstAttribute="top" secondItem="Cnl-XR-e5i" secondAttribute="bottom" constant="30" id="OCQ-IT-HIJ"/>
+                            <constraint firstItem="Cnl-XR-e5i" firstAttribute="leading" secondItem="PhQ-I9-Yk2" secondAttribute="leading" constant="16" id="P1f-YE-ktE"/>
+                            <constraint firstItem="Ocq-e3-p3H" firstAttribute="centerY" secondItem="07F-hh-tBd" secondAttribute="centerY" constant="-150" id="QxZ-ug-zXN"/>
+                            <constraint firstItem="Ocq-e3-p3H" firstAttribute="centerX" secondItem="07F-hh-tBd" secondAttribute="centerX" id="YoT-bL-0O0"/>
                             <constraint firstAttribute="bottom" secondItem="FnS-Gv-P8Z" secondAttribute="bottom" id="hUa-Lu-p3q"/>
-                            <constraint firstItem="PhQ-I9-Yk2" firstAttribute="trailing" secondItem="Cnl-XR-e5i" secondAttribute="trailing" constant="16" id="smb-lB-ZdO"/>
-                            <constraint firstItem="Cnl-XR-e5i" firstAttribute="top" secondItem="Azf-zR-AhI" secondAttribute="bottom" constant="60" id="uPu-Pc-XW3"/>
+                            <constraint firstItem="Azf-zR-AhI" firstAttribute="centerX" secondItem="07F-hh-tBd" secondAttribute="centerX" id="in7-jl-6Jz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PhQ-I9-Yk2"/>
                     </view>

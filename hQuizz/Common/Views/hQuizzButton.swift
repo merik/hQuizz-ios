@@ -24,6 +24,14 @@ class hQuizzButton: UIButton {
         }
     }
     
+    @IBInspectable var isCircular: Bool = false {
+        didSet {
+            if isCircular {
+                cornerRadius = self.bounds.height / 2
+            }
+        }
+    }
+    
     override func draw(_ rect: CGRect) {
         let backgroundMask = CAShapeLayer()
         backgroundMask.path = UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).cgPath
