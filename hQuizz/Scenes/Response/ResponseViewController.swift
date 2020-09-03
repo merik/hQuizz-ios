@@ -30,7 +30,7 @@ class ResponseViewController: UIViewController {
     
     weak var delegate: ResponseViewControllerDelegate?
     
-    var responseData: ResponsePresenter?
+    var responseData: ResponseData?
     
     @IBAction func didTapOnNextQuestion(_ sender: Any) {
         delegate?.nextQuestion(viewController: self)

@@ -18,6 +18,16 @@ class hQuizzButton: UIButton {
         }
     }
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.backgroundColor = active ? UIColor(hQuizz: .primary) : UIColor(hQuizz: .disabled)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.backgroundColor = active ? UIColor(hQuizz: .primary) : UIColor(hQuizz: .disabled)
+    }
+    
     @IBInspectable var cornerRadius: CGFloat = 5 {
         didSet {
             setNeedsDisplay()

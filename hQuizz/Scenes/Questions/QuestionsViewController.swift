@@ -27,7 +27,8 @@ class QuestionsViewController: UIViewController {
     
     var viewModel: QuestionsViewModel!
     
-    var responseViewController: ResponseViewController!
+    private var responseViewController: ResponseViewController!
+    private var endGameViewController: EndGameViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +49,11 @@ class QuestionsViewController: UIViewController {
         viewController.modalPresentationStyle = .fullScreen
         viewController.delegate = self
         responseViewController = viewController
+        
+        let endGameViewController = storyboard.instantiateViewController(identifier: "endgame") as! EndGameViewController
+        endGameViewController.modalPresentationStyle = .fullScreen
+        endGameViewController.delegate = self
+        self.endGameViewController = endGameViewController
         
         sectionLabel.layer.cornerRadius = 5.0
         sectionLabel.clipsToBounds = true
@@ -139,7 +145,8 @@ class QuestionsViewController: UIViewController {
     }
     
     private func showEndOfGame() {
-        dismiss(animated: true, completion: nil)
+        endGameViewController.totalScore = viewModel.totalScore
+        present(endGameViewController, animated: true, completion: nil)
     }
     
     private func showErrorMessage(_ message: String) {
@@ -155,7 +162,7 @@ class QuestionsViewController: UIViewController {
             return
         }
         
-        let data = ResponsePresenter(question: question, image: headlineImageView.image, totalScore: viewModel.totalScore, isAnswerCorrect: true)
+        let data = ResponseData(question: question, image: headlineImageView.image, totalScore: viewModel.totalScore, isAnswerCorrect: true)
         responseViewController.responseData = data
         present(responseViewController, animated: true, completion: nil)
     }
@@ -165,7 +172,7 @@ class QuestionsViewController: UIViewController {
             return
         }
         
-        let data = ResponsePresenter(question: question, image: headlineImageView.image, totalScore: viewModel.totalScore, isAnswerCorrect: false)
+        let data = ResponseData(question: question, image: headlineImageView.image, totalScore: viewModel.totalScore, isAnswerCorrect: false)
         responseViewController.responseData = data
         
         present(responseViewController, animated: true, completion: nil)
@@ -176,4 +183,11 @@ extension QuestionsViewController: ResponseViewControllerDelegate {
     func nextQuestion(viewController: ResponseViewController) {
         viewModel.nextQuestion()
     }
+}
+
+extension QuestionsViewController: EndGameViewControllerDelegate {
+    func endGame(_ viewController: EndGameViewController) {
+        dismiss(animated: false, completion: nil)
+    }
+    
 }

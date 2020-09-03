@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 class hQuizzCircularView: UIView {
     
-    @IBInspectable var color: UIColor? = .green {
+    @IBInspectable var color: UIColor? = UIColor(hQuizz: .primary) {
         didSet {
             self.backgroundColor = color
         }

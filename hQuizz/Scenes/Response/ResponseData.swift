@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct ResponsePresenter {
+struct ResponseData {
     let question: Question
     let image: UIImage?
     let totalScore: Int

@@ -12,7 +12,7 @@ import UIKit
 extension hQuizz {
     enum Colors: UInt64 {
         case disabled = 0x434343ff
-        case primary = 0x0000ffff
+        case primary = 0x37bef6ff
         case danger = 0xf7503eff
         case shadow = 0x00000080
         
