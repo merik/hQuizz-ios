@@ -37,6 +37,10 @@ class QuestionsViewController: UIViewController {
         viewModel.startGame()
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     private func configureViews() {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
